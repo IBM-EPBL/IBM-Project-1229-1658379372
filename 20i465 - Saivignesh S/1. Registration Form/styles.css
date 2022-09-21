@@ -1,0 +1,27 @@
+body {
+    background: rgb(182, 182, 182);
+    font-weight: bold;
+    font-size: 20dp;
+    color: rgb(255, 255, 255);
+}
+thead{
+    background-color: white;
+    color: black;
+}
+
+.formcard{
+    background-color: grey;
+    height: 600px;
+    width: 400px;
+    border-radius: 20px;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    position: absolute;
+
+}
+form{
+    margin-top: 50px;
+}
+
+
