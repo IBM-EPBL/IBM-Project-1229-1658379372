@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Table</title>
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <table border="1" id="tableshow">
+            <thead>
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Email</th>
+                    <th>Password</th>
+                    <th>Batch</th>
+                    <th>Address</th>
+                    <th>Project Category</th>
+                </tr>
+            </thead>
+        </table>
+        <div class="formcard">
+            <center>
+                <br>
+            <label>REGISTRATION FORM</label>
+            <form method="get">
+                <label>First Name </label>
+                <input type="text" name="fname" id="fname" />
+                <br /><br />
+                <label><b>Last Name</b> </label>
+                <input type="text" name="lname" id="lname" />
+                <br /><br />
+                <label><b>Email ID</b> </label>
+                <input type="text" name="email" id="email" />
+                <br /><br />
+                <label>Password </label>
+                <input type="password" name="password" id="password" />
+                <br /><br />
+                <p>Select Batch</p>
+                <div>
+                    <input
+                        type="radio"
+                        name="batch"
+                        value="Batch - 6"
+                        id="India"
+                    />
+                    <label>Batch - 6</label>
+                </div>
+                <div>
+                    <input
+                        type="radio"
+                        name="batch"
+                        value="Batch - 7"
+                        id="b7"
+                    />
+                    <label>Batch - 7</label>
+                </div>
+                <div>
+                    <input
+                        type="radio"
+                        name="batch"
+                        value="Batch - 8"
+                        id="b8"
+                    />
+                    <label>Batch - 8</label>
+                </div>
+                <br /><br />
+                <label>Address: </label>
+                <textarea
+                    name="address"
+                    id="address"
+                    cols="25"
+                    rows="3"
+                ></textarea>
+                <br /><br />
+                <label for="">Project Category: </label>
+                <select id="project">
+                    <option value="1" selected="selected">Cloud Computing</option>
+                    <option value="2">Machine Learning</option>
+                    <option value="3">Others</option>
+                </select>
+                <br /><br />
+                <input type="button" name="button" id="btn" value="Show Data" onclick="AddRow()"
+                />
+            </form>
+        </center>
+        </div>
+
+        <script>
+            var firstname = "",lastname = "", email = "",password = "",batch ="",address = "",project = "";
+            var nextrow=1;
+            function AddRow() {
+                var AddRown = document.getElementById("tableshow");
+                var NewRow = AddRown.insertRow(nextrow);
+
+                firstname = document.getElementById("fname").value;
+                lastname = document.getElementById("lname").value;
+                email = document.getElementById("email").value;
+                password = document.getElementById("password").value;
+                address = document.getElementById("address").value;
+
+                var e = document.getElementById("project");
+
+                project = e.options[e.selectedIndex].text;
+
+                const radioButtons = document.querySelectorAll('input[name="batch"]');
+
+                for (const radioButton of radioButtons) {
+                    if (radioButton.checked) {
+                        batch = radioButton.value;
+                        break;
+                    }
+                }
+
+                var cel1 = NewRow.insertCell(0);
+                var cel2 = NewRow.insertCell(1);
+                var cel3 = NewRow.insertCell(2);
+                var cel4 = NewRow.insertCell(3);
+                var cel5 = NewRow.insertCell(4);
+                var cel6 = NewRow.insertCell(5);
+                var cel7 = NewRow.insertCell(6);
+
+                cel1.innerHTML = firstname;
+                cel2.innerHTML = lastname;
+                cel3.innerHTML = email;
+                cel4.innerHTML = password;
+                cel5.innerHTML = batch;
+                cel6.innerHTML = address;
+                cel7.innerHTML = project;
+                nextrow++;
+            }
+        </script>
+    </body>
+</html>
