@@ -1,5 +1,5 @@
 # Registation Form
 ![alt text](./FORM.png)
 
-# Registation Form
+# Display URL Parameters
 ![alt text](./DISPLAY.png)
