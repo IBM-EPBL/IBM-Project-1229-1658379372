@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+    <head>        
+        <title>Display Page</title>
+        <link rel="stylesheet" href="/static/style.css" />
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+        />
+    </head>
+    <body>
+        <div id="content">
+            <h2 style="text-align: center">
+                <strong> Registration Page</strong>
+            </h2>
+        <center>
+            <table class="table" border="1" style="width: 500px; border-color: grey;">
+                <tbody>
+                    <tr>
+                        <th>Full Name</th>
+                        <td id="name"></td>
+                    </tr>
+                    <tr>
+                        <th>Email</th>
+                        <td id="email"></td>
+                    </tr>
+                    <tr>
+                        <th>Qualification</th>
+                        <td id="qualification"></td>
+                    </tr>
+                    <tr>
+                        <th>Age</th>
+                        <td id="age"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </center>
+        </div>
+        <script>
+            Name = document.getElementById("name");
+            qual = document.getElementById("qualification");
+            age = document.getElementById("age");
+            email = document.getElementById("email");
+
+            const URLParameters = new URLSearchParams(window.location.search);
+
+            Name.innerText = URLParameters.get("name");
+            qual.innerText = URLParameters.get("qualification");
+            age.innerText = URLParameters.get("age");
+            email.innerText = URLParameters.get("email");
+        </script>
+    </body>
+</html>
