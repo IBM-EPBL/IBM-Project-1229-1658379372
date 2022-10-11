@@ -84,7 +84,7 @@ def multi_part_upload(bucket_name, item_name, file_path):
 
 @app.route('/')
 def index():
-    files = get_bucket_contents('adhi-bucket')
+    files = get_bucket_contents('bucket-sai18')
     
     return render_template('index.html', files = files)
 
