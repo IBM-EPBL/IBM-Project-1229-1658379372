@@ -9,7 +9,7 @@ Q4: Design a chatbot using IBM Watson assistant for hospital. Ex: User comes wit
 
 [<img src="https://cdn-icons-png.flaticon.com/512/2040/2040946.png" width="100"/>](https://web-chat.global.assistant.watson.appdomain.cloud/preview.html?backgroundImageURL=https%3A%2F%2Fau-syd.assistant.watson.cloud.ibm.com%2Fpublic%2Fimages%2Fupx-c461f71a-3d55-4b78-967c-53deb64ebc7a%3A%3Abbd25503-aca5-403c-946d-873553c3befb&integrationID=be2ec663-d312-47bd-b672-acfa0b2bf45a&region=au-syd&serviceInstanceID=c461f71a-3d55-4b78-967c-53deb64ebc7a)
 <strong><h6>Click the above Chat Bot Icon</h6></strong>
-# Q5: Create Watson assistant service with 10 steps and use 3 conditions in it. Load that script in HTML page.
+Q5: Create Watson assistant service with 10 steps and use 3 conditions in it. Load that script in HTML page.
 
 
 
