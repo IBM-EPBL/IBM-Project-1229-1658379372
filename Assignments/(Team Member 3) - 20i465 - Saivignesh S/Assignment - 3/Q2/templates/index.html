@@ -13,20 +13,15 @@
     <link rel="stylesheet" href="https://bucket-sai18.s3.jp-tok.cloud-object-storage.appdomain.cloud/page.css">
     <title>Document</title>
 </head>
-<body>
-    <div class=”img”>
-  
-          <img src="https://bucket-sai18.s3.jp-tok.cloud-object-storage.appdomain.cloud/1.jpg" width="700" height="350" class="img__img" alt="Image 1">
-       
-          <img src="https://bucket-sai18.s3.jp-tok.cloud-object-storage.appdomain.cloud/2.jpg" width="700" height="350" class="img__img" alt="Image 2">
-    
-          <img src="https://bucket-sai18.s3.jp-tok.cloud-object-storage.appdomain.cloud/3.jpg" width="700" height="350" class="img__img" alt="Image 3">
-     
-          <img src="https://bucket-sai18.s3.jp-tok.cloud-object-storage.appdomain.cloud/4.jpg" width="700" height="350" class="img__img" alt="Image 4">
-       
-          <img src="https://bucket-sai18.s3.jp-tok.cloud-object-storage.appdomain.cloud/5.jpg" width="700" height="350" class="img__img" alt="Image 5">
-     
-       
-      </div>
-</body>
+    <body>
+      {% for row in files %}
+      <center>
+        <div>
+            <h3>Image Name : {{row}} </h3>
+            <img src="https://bucket-sai18.s3.jp-tok.cloud-object-storage.appdomain.cloud/{{row}}" width="750px"></td>
+         </div>
+      </center>
+         
+      {% endfor %}
+   </body>
 </html>
