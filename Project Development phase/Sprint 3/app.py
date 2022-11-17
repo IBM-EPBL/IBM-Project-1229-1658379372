@@ -16,7 +16,7 @@ app = Flask(__name__)
 
 app.secret_key = 'a'
 
-conn=ibm_db.connect("DATABASE=bludb;HOSTNAME=824dfd4d-99de-440d-9991-629c01b3832d.bs2io90l08kqb1od8lcg.databases.appdomain.cloud;PORT=30119;SECURITY=SSL;SSLServerCertificate=DigiCertGlobalRootCA.crt;UID=mtq37014;PWD=W4Sam6RCrj9zDrfD;",'','')
+conn=ibm_db.connect("DATABASE=bludb;HOSTNAME='';PORT='';SECURITY=SSL;SSLServerCertificate=DigiCertGlobalRootCA.crt;UID='';PWD='';",'','')
 
 
 
